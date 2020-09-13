@@ -16,15 +16,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-// this is supposed to be the styling for the Typography component
-// const useStylesTypography = makeStyles({
-//     root: {
-//         width: '100%',
-//         maxWidth: 500,
-//     }
-// })
-
 export default function GlobalData() {
     const classes = useStyles();
 
@@ -73,7 +64,7 @@ export default function GlobalData() {
                 </Paper>
                 <Paper elevation={3} style={{ color: "red", paddingTop: '20px' }}>
                     <Typography variant="h5" gutterBottom>
-                        Casualities
+                        Deaths
                 </Typography>
                     <Typography variant="subtitle1" gutterBottom>
                     {loading}
@@ -113,7 +104,7 @@ export default function GlobalData() {
             </Paper>
             <Paper elevation={3} style={{ color: "red", paddingTop: '20px' }}>
                 <Typography variant="h5" gutterBottom>
-                    Casualities
+                    Deaths
             </Typography>
                 <Typography variant="subtitle1" gutterBottom>
                 {globalData && globalData.results[0].total_deaths.toLocaleString()}

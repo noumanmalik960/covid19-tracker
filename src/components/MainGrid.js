@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import GlobalData from './GlobalData';
+import CountryPicker from './CountryPicker'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,7 +29,7 @@ export default function MainGrid() {
         </Grid>
         <Grid item xs={8}>
           <Paper className={classes.paper}>
-              Country Data
+              <CountryPicker />
           </Paper>
         </Grid>
       </Grid>
