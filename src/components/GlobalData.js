@@ -39,7 +39,7 @@ export default function GlobalData() {
         return (
             <div className={classes.root}>
                 <Paper elevation={3} style={{ paddingTop: '20px' }}>
-                    <Typography variant="h5" gutterBottom>
+                    <Typography variant="h6" gutterBottom>
                         Global Cases
                 </Typography>
                     <Typography variant="subtitle1" gutterBottom>
@@ -47,7 +47,7 @@ export default function GlobalData() {
                 </Typography>
                 </Paper>
                 <Paper elevation={3} style={{ color: "orange", paddingTop: '20px' }}>
-                    <Typography variant="h5" gutterBottom>
+                    <Typography variant="h6" gutterBottom>
                         Active
                 </Typography>
                     <Typography variant="subtitle1" gutterBottom>
@@ -55,7 +55,7 @@ export default function GlobalData() {
                 </Typography>
                 </Paper>
                 <Paper elevation={3} style={{ color: "green", paddingTop: '20px' }}>
-                    <Typography variant="h5" gutterBottom>
+                    <Typography variant="h6" gutterBottom>
                         Healed
                 </Typography>
                     <Typography variant="subtitle1" gutterBottom>
@@ -63,7 +63,7 @@ export default function GlobalData() {
                 </Typography>
                 </Paper>
                 <Paper elevation={3} style={{ color: "red", paddingTop: '20px' }}>
-                    <Typography variant="h5" gutterBottom>
+                    <Typography variant="h6" gutterBottom>
                         Deaths
                 </Typography>
                     <Typography variant="subtitle1" gutterBottom>
@@ -79,7 +79,7 @@ export default function GlobalData() {
     return (
         <div className={classes.root}>
             <Paper elevation={3} style={{ paddingTop: '20px' }}>
-                <Typography variant="h5" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     Global Cases
             </Typography>
                 <Typography variant="subtitle1" gutterBottom>
@@ -87,7 +87,7 @@ export default function GlobalData() {
             </Typography>
             </Paper>
             <Paper elevation={3} style={{ color: "orange", paddingTop: '20px' }}>
-                <Typography variant="h5" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     Active
             </Typography>
                 <Typography variant="subtitle1" gutterBottom>
@@ -95,7 +95,7 @@ export default function GlobalData() {
             </Typography>
             </Paper>
             <Paper elevation={3} style={{ color: "green", paddingTop: '20px' }}>
-                <Typography variant="h5" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     Healed
             </Typography>
                 <Typography variant="subtitle1" gutterBottom>
@@ -103,7 +103,7 @@ export default function GlobalData() {
             </Typography>
             </Paper>
             <Paper elevation={3} style={{ color: "red", paddingTop: '20px' }}>
-                <Typography variant="h5" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     Deaths
             </Typography>
                 <Typography variant="subtitle1" gutterBottom>
