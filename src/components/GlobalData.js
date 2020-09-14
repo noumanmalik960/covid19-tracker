@@ -56,7 +56,7 @@ export default function GlobalData() {
                 </Paper>
                 <Paper elevation={3} style={{ color: "green", paddingTop: '20px' }}>
                     <Typography variant="h6" gutterBottom>
-                        Healed
+                        Recovered
                 </Typography>
                     <Typography variant="subtitle1" gutterBottom>
                     {loading}
@@ -96,7 +96,7 @@ export default function GlobalData() {
             </Paper>
             <Paper elevation={3} style={{ color: "green", paddingTop: '20px' }}>
                 <Typography variant="h6" gutterBottom>
-                    Healed
+                    Recovered
             </Typography>
                 <Typography variant="subtitle1" gutterBottom>
                 {globalData && globalData.results[0].total_recovered.toLocaleString()}

@@ -74,7 +74,7 @@ export default function CountryData({ url }) {
           <Grid item xs>
             <Paper className={classes.paper}>
             <Typography variant="h6" style={{ color: 'green'}} gutterBottom>
-                  Healed
+                  Recovered
                 </Typography>
                 <Typography variant="subtitle1" style={{ color: 'green'}} gutterBottom>
                 {loading}
@@ -112,7 +112,7 @@ export default function CountryData({ url }) {
         <Grid item xs>
           <Paper className={classes.paper}>
           <Typography variant="h6" style={{ color: 'green'}} gutterBottom>
-                Healed
+                Recovered
               </Typography>
               <Typography variant="subtitle1" style={{ color: 'green'}} gutterBottom>
               {data && data.recovered.value.toLocaleString()}
