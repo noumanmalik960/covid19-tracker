@@ -1,0 +1,25 @@
+name: covid-tracker-deploy
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install nodejs
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '12'
+      
+    - name: Install yarn
+      uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: build
+        
+    - name: Install surge
+      run: npm install -g surge
+    - name: Run surge
+      run: surge ./build coronavayris.surge.sh --token ${{ secrets.SURGE_TOKEN }}
