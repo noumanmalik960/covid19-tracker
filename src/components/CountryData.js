@@ -105,7 +105,7 @@ export default function CountryData({ url }) {
                 Total
               </Typography>
               <Typography variant="subtitle1" style={{ color: 'black'}} gutterBottom>
-              {data && data.confirmed.value}
+              {data && data.confirmed.value.toLocaleString()}
               </Typography>
           </Paper>
         </Grid>
@@ -115,7 +115,7 @@ export default function CountryData({ url }) {
                 Recovered
               </Typography>
               <Typography variant="subtitle1" style={{ color: 'green'}} gutterBottom>
-              {data && data.recovered.value}
+              {data && data.recovered.value.toLocaleString()}
               </Typography>
           </Paper>
         </Grid>
@@ -125,7 +125,7 @@ export default function CountryData({ url }) {
                 Deaths
               </Typography>
               <Typography variant="subtitle1" style={{ color: 'red'}} gutterBottom>
-              {data && data.deaths.value}
+              {data && data.deaths.value.toLocaleString()}
               </Typography>
           </Paper>
         </Grid>
