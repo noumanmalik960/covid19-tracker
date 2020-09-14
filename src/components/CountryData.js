@@ -23,12 +23,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // for typography
-const useTypographyStyles = makeStyles({
-  root: {
-    width: '100%',
-    maxWidth: 500,
-  },
-});
+// const useTypographyStyles = makeStyles({
+//   root: {
+//     width: '100%',
+//     maxWidth: 500,
+//   },
+// });
 
 
 
@@ -39,7 +39,7 @@ export default function CountryData({ url }) {
   // Material UI
   const classes = useStyles();
   // Typography
-  const typographyClasses = useTypographyStyles();
+  // const typographyClasses = useTypographyStyles();
 
   const [data, setData] = useState();
   const [isLoading, setLoading] = useState(false);
