@@ -3,8 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-//typography
+// Typography
 import Typography from '@material-ui/core/Typography';
+// Charts import
+import { Bar } from 'react-chartjs-2'
+
+
 
 
 
@@ -23,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// for typography
+// For Typography
 // const useTypographyStyles = makeStyles({
 //   root: {
 //     width: '100%',
@@ -45,18 +49,43 @@ export default function CountryData({ url }) {
   const [data, setData] = useState();
   const [isLoading, setLoading] = useState(false);
   const loading = "Loading...";
+	// For Charts
+	const [chartData, setChartData] = useState({})
 
   useEffect(() => {
     async function fetchCountryData() {
       setLoading(true);
       const apiResult = await fetch(url);
       const DATA = await apiResult.json();
+      chart();
       setLoading(false);
       setData(DATA);
     }
 
     fetchCountryData();
   }, [url])
+
+	// For Charts
+	const chart = () => {
+		setChartData({
+			labels: ['Total', 'Recovered', 'Deaths'],
+			datasets: [
+				{
+					label: 'level of thickness',
+					data: [(data && data.confirmed.value), (data && data.recovered.value), (data && data.deaths.value)],
+					backgroundColor: [
+						'rgba(75, 192, 192, 0.6)',
+						'lightgreen',
+						'red'
+					],
+          borderWidth: 4
+				}
+			]
+		})
+	}
+
+
+
 
   if (isLoading) {
     return (
@@ -93,6 +122,7 @@ export default function CountryData({ url }) {
             </Paper>
           </Grid>
         </Grid>
+        <h3>loading...</h3>
       </div>
     )
   }
@@ -107,6 +137,7 @@ export default function CountryData({ url }) {
               </Typography>
               <Typography variant="subtitle1" style={{ color: 'black'}} gutterBottom>
               {data && data.confirmed.value.toLocaleString()}
+              
               </Typography>
           </Paper>
         </Grid>
@@ -131,6 +162,7 @@ export default function CountryData({ url }) {
           </Paper>
         </Grid>
       </Grid>
+      <Bar data={chartData} />
     </div>
   )
 }
