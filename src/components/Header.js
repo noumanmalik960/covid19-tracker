@@ -28,7 +28,7 @@ export default function Header() {
             Covid-19 Tracker
           </Typography>
           <address >
-            <a id='github' href="https://github.com/noumanmalik960/covid19-tracker">GitHub</a>
+            <a target="_blank" id='github' href="https://github.com/noumanmalik960/covid19-tracker">GitHub</a>
           </address>
         </Toolbar>
       </AppBar>
