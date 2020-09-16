@@ -17,7 +17,8 @@ jobs:
         cmd: install
         
     - name: Install chartjs
-      run: npm install --save react-chartjs-2 chart.js
+      with:
+        cmd: npm install --save react-chartjs-2 chart.js
 
     
     
