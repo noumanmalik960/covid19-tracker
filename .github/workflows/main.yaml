@@ -15,16 +15,19 @@ jobs:
       uses: borales/actions-yarn@v2.0.0
       with:
         cmd: install
-        
-    - name: Install chartjs
-      with:
-        cmd: npm install --save react-chartjs-2 chart.js
-
+    
     
     
     - uses: borales/actions-yarn@v2.0.0
       with:
         cmd: build
+    
+    
+    - name: Install chartjs
+      with:
+        cmd: npm install --save react-chartjs-2 chart.js
+
+    
         
     
         
