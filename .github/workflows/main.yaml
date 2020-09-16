@@ -17,7 +17,8 @@ jobs:
         cmd: install
         
     - name: Install chartjs
-      run: yarn add react-chartjs-2
+      run: npm install --save react-chartjs-2 chart.js
+
     
     
     - uses: borales/actions-yarn@v2.0.0
