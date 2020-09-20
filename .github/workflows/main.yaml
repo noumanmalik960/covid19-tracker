@@ -15,14 +15,9 @@ jobs:
       uses: borales/actions-yarn@v2.0.0
       with:
         cmd: install
-    
-    - name: Install chart js
-      run: yarn add react-chartjs-2
-
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: build
-    
+   
+    - name: Make build 
+      run: yarn build
         
     - name: Install surge
       run: npm install -g surge
