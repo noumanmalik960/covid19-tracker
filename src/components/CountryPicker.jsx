@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NativeSelect, FormControl } from '@material-ui/core';
 import CountryData from './CountryData';
-import Chart from './Chart'
 
 
 
